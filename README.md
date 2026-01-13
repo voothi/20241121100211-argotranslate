@@ -1,5 +1,6 @@
 # Argo Translate GoldenDict Integration
 
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue)](https://github.com/voothi/20241121100211-argotranslate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A configuration guide and ecosystem for integrating Argo Translate with GoldenDict-ng for offline translation.
