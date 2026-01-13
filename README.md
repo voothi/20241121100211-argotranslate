@@ -5,12 +5,17 @@
 A configuration guide and ecosystem for integrating Argo Translate with GoldenDict-ng for offline translation.
 
 ## Table of Contents
-- [Description](#description)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Kardenwort Ecosystem](#kardenwort-ecosystem)
-- [License](#license)
+- [Argo Translate GoldenDict Integration](#argo-translate-goldendict-integration)
+  - [Table of Contents](#table-of-contents)
+  - [Description](#description)
+  - [Features](#features)
+  - [Installation](#installation)
+    - [1. Environment Setup](#1-environment-setup)
+    - [2. Installing Languages](#2-installing-languages)
+    - [3. GoldenDict-ng Configuration](#3-goldendict-ng-configuration)
+  - [Usage](#usage)
+  - [Kardenwort Ecosystem](#kardenwort-ecosystem)
+  - [License](#license)
 
 ---
 
@@ -36,9 +41,23 @@ python -m venv venv
 .\venv\Scripts\activate
 pip install argos-translate
 ```
-*Note: You may need to install language packages for Argo Translate separately.*
 
-### 2. GoldenDict-ng Configuration
+### 2. Installing Languages
+To use a specific language pair, you must install its package using the Argos Translate Package Manager (`argospm`).
+
+1. Update the package index:
+   ```bash
+   argospm update
+   ```
+2. Install the desired language pair (e.g., English to Russian):
+   ```bash
+   argospm install translate-en_ru
+   ```
+   *Tip: Use `argospm search -f <from> -t <to>` to find specific package names.*
+
+3. Repeat for other required pairs (e.g., `translate-en_de`, `translate-de_ru`, etc.).
+
+### 3. GoldenDict-ng Configuration
 To add the translators to GoldenDict-ng:
 
 1. Open GoldenDict-ng.
