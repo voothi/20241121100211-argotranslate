@@ -43,19 +43,24 @@ pip install argos-translate
 ```
 
 ### 2. Installing Languages
-To use a specific language pair, you must install its package using the Argos Translate Package Manager (`argospm`).
+To use the configured language pairs, you must install the corresponding packages. Since some direct translations (like German <-> Russian) use English as a pivot, installing the English pairs covers all configurations.
 
 1. Update the package index:
    ```bash
    argospm update
    ```
-2. Install the desired language pair (e.g., English to Russian):
-   ```bash
-   argospm install translate-en_ru
-   ```
-   *Tip: Use `argospm search -f <from> -t <to>` to find specific package names.*
 
-3. Repeat for other required pairs (e.g., `translate-en_de`, `translate-de_ru`, etc.).
+2. Install the required language packages:
+   ```bash
+   # English <-> Russian
+   argospm install translate-en_ru
+   argospm install translate-ru_en
+
+   # English <-> German
+   argospm install translate-en_de
+   argospm install translate-de_en
+   ```
+   *Note: Installing these four packages enables En-Ru, En-De, De-En, Ru-En, as well as De-Ru and Ru-De (via English pivot).*
 
 ### 3. GoldenDict-ng Configuration
 To add the translators to GoldenDict-ng:
